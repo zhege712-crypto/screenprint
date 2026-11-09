@@ -1,0 +1,7 @@
+interface:
+  display_name: "Screenprint"
+  short_description: "Screen-printed talk decks: OOXML edits, real PowerPoint exports, speech pack"
+  default_prompt: "Use $screenprint to probe this deck, list the page-level changes, then build, render and audit a new version instead of editing the release in place."
+
+policy:
+  allow_implicit_invocation: true

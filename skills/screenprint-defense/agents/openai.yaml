@@ -1,0 +1,7 @@
+interface:
+  display_name: "Screenprint Defense"
+  short_description: "Defence/答辩 decks: contribution-first structure, question bank, backup pages"
+  default_prompt: "Use $screenprint-defense to turn this thesis results into a defence deck: contribution page, scoped evidence, limitations, and a backup-page plan for the committee questions."
+
+policy:
+  allow_implicit_invocation: true

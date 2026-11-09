@@ -1,0 +1,124 @@
+{
+  "identity": "screenprint - screen-printed deck house style",
+  "version": "1.0",
+  "notes": "This file is the swappable house-style layer. A future deck skill for another talk forks this JSON and the identity card, keeps the engine (SKILL.md, references 01-07, scripts).",
+  "canvas": {
+    "emu": [
+      12192000,
+      6858000
+    ],
+    "aspect": "16:9",
+    "raster_review": [
+      1600,
+      900
+    ],
+    "raster_texture": [
+      1920,
+      1080
+    ]
+  },
+  "palette": {
+    "paper": "#FBF6EE",
+    "plate": "#FDFDFC",
+    "ink_navy": "#17364A",
+    "ink_teal": "#087F8C",
+    "ink_orange": "#CB672A",
+    "ink_grey": "#7F929C",
+    "ink_ice": "#DDEBEF",
+    "ice_soft": "#D8E7ED",
+    "caption": "#4C5D66",
+    "photo_context": "#41525A",
+    "grey_strip": "#C7D2D7",
+    "accent_theme2": "#E97132",
+    "accent_amber_eyebrow": "#FFC000",
+    "data_series_navy": "#17364A",
+    "data_series_orange": "#CB672A",
+    "car_blue": "#334F5D",
+    "car_orange": "#875F3C"
+  },
+  "roles": {
+    "field": "ink_navy — header band, footer rail, divider panel, table header, chart ink",
+    "marks": "ink_ice — band text, logos, footer, page numbers",
+    "accent": "ink_teal — title ribbon, section eyebrow on body pages, key statements",
+    "data": "ink_navy + ink_orange only; never introduce a third data colour",
+    "text_on_paper": "ink_navy (headings) / caption (secondary) — caption must be >= 6:1 on paper",
+    "text_on_navy": "ink_ice >= 9:1"
+  },
+  "type_scale_pt": {
+    "cover_title": 42,
+    "closing_title": 48,
+    "slide_title": 31.5,
+    "divider_title": 46.5,
+    "divider_numeral": 142.5,
+    "list_item": 24,
+    "statement": 21.75,
+    "sidebar_bullet": 20.25,
+    "panel_heading": 20.25,
+    "figure_title": 18.75,
+    "body_lead": 18.75,
+    "caption": 13.15,
+    "page_number": 12,
+    "section_nav": 10.5,
+    "footer": 9.5,
+    "photo_context": 9.0,
+    "photo_credit": 9.0
+  },
+  "type_weights": {
+    "titles": "bold",
+    "statements": "bold",
+    "list_items": "regular",
+    "captions": "regular",
+    "footer_and_page": "regular"
+  },
+  "font": {
+    "latin": "Arial",
+    "fallback": "Helvetica / Liberation Sans",
+    "rule": "one family; weights only, never a second typeface"
+  },
+  "geometry_emu": {
+    "margin_x": 609600,
+    "header_band": {
+      "top": 0,
+      "height": 800000
+    },
+    "footer_rail": {
+      "top": 6480000,
+      "height": 378000
+    },
+    "title_ribbon": {
+      "left": 381000,
+      "top": 962025,
+      "width": 47625,
+      "height": 371475
+    },
+    "title_baseline": 866775,
+    "caption_top": 6172200,
+    "logo_center_band": 400000,
+    "divider_panel_width": 6096000
+  },
+  "motifs": {
+    "halftone_dots": "rotated grid, pitch 13-18 px at 1920 wide, radial ramp from a clean centre",
+    "stripes": "single 45-degree family, pitch 13, width 2.4 px, no crosshatch",
+    "pattern_tiles": "navy tiles with 5-30% paper dots for dark blocks (table headers, divider panels)",
+    "hairline_ring": "1 px registration circle on the disc motifs",
+    "feet": "no rules, no corner squares, no 3x3 dot grids — remove leftover marks"
+  },
+  "media_rules": {
+    "video": "1280x520 @ 60 fps, 6 s panels, poster = final (state) or mid (action) frame, loop on click",
+    "charts": "native pptx charts only; print-style ink fills; no 3-D, no gradients inside bars",
+    "logos": "ice-ink single-colour versions printed straight on navy, no white plates"
+  },
+  "animation_rules": {
+    "entrance": "fade + 24-38 EMU/thousand ink rise (text), wipe up (vertical bars), wipe right (horizontal bars)",
+    "chart_build": "bldSub + a:bldChart (category for 1-series/stacked, series for clustered), one click",
+    "click_budget": "43 groups for 21 main pages — do not add click stops when enriching motion",
+    "duration": "0.52-0.66 s per effect, decel 20000"
+  },
+  "forbidden": [
+    "a pattFill preset other than the documented list (pct35 corrupts the file)",
+    "a third data colour",
+    "white plates behind logos",
+    "text below 4.5:1 contrast on its background",
+    "adding or removing page numbers / footer on a subset of body pages"
+  ]
+}
